@@ -1,0 +1,29 @@
+{
+  "name": "p2p-sockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify client/ -o public/main.js",
+    "watch:bundle": "watchify -vd client/ -o public/main.js",
+    "start": "node .",
+    "watch:start": "nodemon --ignore public/ --ignore client/",
+    "watch": "run-p watch:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.15.4",
+    "simple-peer": "8.1.1",
+    "socket.io": "2.0.3",
+    "wrtc": "0.0.62"
+  },
+  "devDependencies": {
+    "browserify": "14.4.0",
+    "nodemon": "1.11.0",
+    "npm-run-all": "4.0.2",
+    "watchify": "3.9.0"
+  }
+}
